@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+.navbar {
+    text-align: center;
+    padding: 30px;
+    background-color: rgb(161, 170, 170);
+    font-size: x-large;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+.div {
+  display: flex;
+  cursor: pointer;
+  border: 1px solid black;
+  font-weight: bolder;
+  font-size: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+}
+.div:first-child,
+.div:nth-child(2),
+.div:nth-child(3)
+{
+    border-top: none;
+}
+.div:nth-child(3n+1)
+{
+    border-left: none;
+}
+.div:nth-child(3n+3)
+{
+border-right: none;
+}
+.div:last-child,
+.div:nth-child(8),
+.div:nth-child(7)
+{
+    border-bottom: none;
+}
+.player1, .player2 {
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background-color: rgb(161, 170, 170);
+    padding: 5px 60px;
+    font-size: xx-large;
+    /* margin: 30px; */
+}
+.choice {
+  font-size: large;
+  font-weight: bold;
+  padding: 15px 35px;
+  border-radius: 5px;
+  cursor: pointer;
+  /* border: none; */
+}
+.winner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #000000ea;
+    color: white;
+    flex-direction: column;
+    gap: 3rem;
+    font-size: xx-large;
+}
+.hidden {
+  display: none;
+}
+
+
+
+ @media all and (max-width: 950px)
+ {
+    .container {
+        flex-direction: column;
+    }
+
+ } 
